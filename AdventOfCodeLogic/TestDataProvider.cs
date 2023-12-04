@@ -68,7 +68,7 @@ public class SessionDataProvider : ITestDataProvider
         var cookie = new Cookie
         {
             Name = "session",
-            Value = "53616c7465645f5f562e84d05324afd871ef020ea60f3d286e36449dcf1fb7c83e847d7f4ea50556eaaa66f5a0cf1205b66fec188800fc03c9573741350676a7",
+            Value = "", // Insert your session from website cookie here
             Domain = ".adventofcode.com", 
             Path = "/",             
             HttpOnly = true,       
