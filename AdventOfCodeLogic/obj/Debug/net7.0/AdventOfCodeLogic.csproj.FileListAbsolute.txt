@@ -1,0 +1,11 @@
+C:\git\advent23\AdventOfCodeLogic\bin\Debug\net7.0\AdventOfCodeLogic.deps.json
+C:\git\advent23\AdventOfCodeLogic\bin\Debug\net7.0\AdventOfCodeLogic.dll
+C:\git\advent23\AdventOfCodeLogic\bin\Debug\net7.0\AdventOfCodeLogic.pdb
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\AdventOfCodeLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\AdventOfCodeLogic.AssemblyInfoInputs.cache
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\AdventOfCodeLogic.AssemblyInfo.cs
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\AdventOfCodeLogic.csproj.CoreCompileInputs.cache
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\AdventOfCodeLogic.dll
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\refint\AdventOfCodeLogic.dll
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\AdventOfCodeLogic.pdb
+C:\git\advent23\AdventOfCodeLogic\obj\Debug\net7.0\ref\AdventOfCodeLogic.dll
