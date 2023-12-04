@@ -46,7 +46,16 @@ Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green");
         Assert.That(result, Is.EqualTo(2771));
     }
 
-     [Test]
+    [Test]
+    public async Task RunWithFredrikDataset()
+    {
+        ITestDataProvider dataProvider = new FileTestDataProvider(@"C:\Temp\advent23\fredrik", 2); 
+        var logic = new AdventOfCodeLogic.Day2();
+        var result = await logic.SolvePart1(dataProvider, 12, 13, 14);
+        Assert.That(result, Is.EqualTo(2265));
+    }
+
+    [Test]
     public async Task TestPart2()
     {
         ITestDataProvider dataProvider = new AdventOfCodeLogic.StringTestDataProvider(@"Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green

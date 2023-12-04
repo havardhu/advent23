@@ -34,7 +34,7 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11");
         Assert.That(result, Is.EqualTo(23678));
     }
 
-        [Test]
+    [Test]
     public async Task TestPart2()
     {
         ITestDataProvider dataProvider = new AdventOfCodeLogic.StringTestDataProvider(@"Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
@@ -47,5 +47,16 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11");
         var logic = new AdventOfCodeLogic.Day4();
         var result = await logic.SolvePart2(dataProvider);
         Assert.That(result, Is.EqualTo(30));
+    }
+
+
+    [Test]
+    public async Task RunPart2()
+    {
+        ITestDataProvider dataProvider = new SessionDataProvider(4);
+
+        var logic = new AdventOfCodeLogic.Day4();
+        var result = await logic.SolvePart2(dataProvider);
+        Assert.That(result, Is.EqualTo(23678));
     }
 }
