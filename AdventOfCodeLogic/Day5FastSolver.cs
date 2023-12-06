@@ -20,6 +20,7 @@ namespace AdventOfCodeLogic
         /// </summary>
         public (long destination, long range)[] Map(long source, long range)
         {
+            Console.WriteLine($"Mapping {Name} {source}-{source+range} (r={range})");
             var orderedMaps = _maps.OrderBy(x => x.Source).ToArray();
             List<(long destination, long range)> result = new List<(long destination, long range)>();
             long remainingRange = range;
@@ -31,13 +32,13 @@ namespace AdventOfCodeLogic
                     var diff = source - map.Source;
                     if (remainingMapRange >= remainingRange)
                     {
-                        Console.WriteLine($"Map {Name}: {source}-{source+remainingRange} => {map.Destination + diff}-{map.Destination + diff + remainingRange}");
+                        Console.WriteLine($"Creating range map for {Name} [{map.Source}-{map.Source + remainingMapRange}] => [{map.Destination + diff}-{map.Destination + diff + remainingRange}]");
                         result.Add((map.Destination + diff, remainingRange));
                         break;
                     }
                     else
                     {
-                        Console.WriteLine($"Map {Name}: {source}-{source + remainingRange} => {map.Destination + diff}-{map.Destination + diff + remainingRange}");
+                        Console.WriteLine($"Creating range map for {Name} [{map.Source}-{map.Source + remainingMapRange}] => [{map.Destination + diff}-{map.Destination + diff + remainingRange}]");
                         result.Add((map.Destination + diff, remainingMapRange));
                         remainingRange -= remainingMapRange;
                         source += remainingMapRange;
@@ -108,7 +109,7 @@ namespace AdventOfCodeLogic
 
     public class Day5Fast1337Solver
     {
-        public async Task<long> SolvePart2Recursive(ITestDataProvider dataProvider)
+        public async Task<long> SolvePart2(ITestDataProvider dataProvider)
         {
             var lines = await dataProvider.GetLinesAsync();
 
@@ -125,7 +126,7 @@ namespace AdventOfCodeLogic
                     var numbers = line.GetNumbers();
                     if (!numbers.Any())
                     {
-                        currentMap = new RangeMapCollection(line);
+                        currentMap = new RangeMapCollection(line.Replace("map", "").Replace(":", "").Replace("-"," ").Trim());
                         maps.Add(currentMap);
                     }
 

@@ -153,7 +153,7 @@ humidity-to-location map:
 56 93 4");
 
         var logic = new AdventOfCodeLogic.Day5Fast1337Solver();
-        var result = await logic.SolvePart2Recursive(dataProvider);
+        var result = await logic.SolvePart2(dataProvider);
         Assert.That(result, Is.EqualTo(46));
     }
 
@@ -163,7 +163,7 @@ humidity-to-location map:
     {
         ITestDataProvider dataProvider = new SessionDataProvider(5);
         var logic = new AdventOfCodeLogic.Day5Fast1337Solver();
-        var result = await logic.SolvePart2Recursive(dataProvider);
+        var result = await logic.SolvePart2(dataProvider);
         Assert.That(result, Is.EqualTo(23738616));
     }
 }
