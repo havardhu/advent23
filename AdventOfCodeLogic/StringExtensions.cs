@@ -117,6 +117,7 @@ public static class StringExtensions
 
         return result.ToArray();
     }
+    
 
     public static (int number, string stringValue) SplitNumberAndString(this string value)
     {
